@@ -17,12 +17,14 @@ public class RegisterUser {
 	WebDriver driver;
 	Select dropdown;
 
+
 	public RegisterUser(WebDriver driver)
 	
 	{
 	    this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
+	
 	
 	
 	//Actions actions = new Actions(driver);
@@ -117,8 +119,21 @@ public class RegisterUser {
 	@FindBy(id="mobile_number")
 	WebElement txtMobileNumber;
 	
+	//Create account btn
+	@FindBy(xpath = "//button[@data-qa='create-account']")
+	WebElement btnCreateAccount;
 	
+	//continue button
+	@FindBy(xpath="//a[@data-qa='continue-button']")
+	WebElement btnContinue;
 	
+	//delete button
+	@FindBy(xpath = "//a[contains(text(),' Delete Account')]")
+	WebElement btnDelete;
+	
+	//delete continue btn
+	@FindBy(xpath="//a[contains(text(),'Continue')]")
+	WebElement btnDeleteContinue;
 	
 	
 	
@@ -240,8 +255,24 @@ public class RegisterUser {
 	{
 		txtMobileNumber.sendKeys(mobilenumber);
 	}
+	public void clickCreateAccount(JavascriptExecutor js)
+	{
+		js.executeScript("arguments[0].click()",btnCreateAccount);
+	}
 	
-	
+	public void clickContinue()
+	{
+		btnContinue.click();
+	}
+	public void clickDelete()
+	{
+		//wait.until(ExpectedConditions.elementToBeClickable(btnDelete)).click();
+		btnDelete.click();
+	}
+	public void clickDeleteContinue() 
+	{
+	      btnDeleteContinue.click();	
+	}
 	
 	
 	

@@ -1,44 +1,30 @@
 package com.ecommerceAutomation.testCases;
-
-
-
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 import com.ecommerceAutomation.pageObjects.RegisterUser;
+import com.ecommerceAutomation.utilities.Methods_HomePage;
 
 public class TC_RegisterUser_001 extends BaseClass {
 	
 	@Test
 	public void RegisterUser () throws InterruptedException
 	{
-	
-
 		ExtentTest test;
-	
 		RegisterUser reg = new RegisterUser(driver);
-		
+		Methods_HomePage hp = new Methods_HomePage();
 		test=extent.createTest("RegisterUser");
-		SoftAssert softassert=new SoftAssert();
 		
+		//Verify that home page is visible successfully
+		hp.homepageIsVisible(driver, test);
 		
-		softassert.assertTrue(driver.getTitle().equalsIgnoreCase("Automation Exercise"),"home page is visible successfully");
-		test.log(Status.PASS,"home page is visible successfully");
-		
+	    //Clicking on the LoginOrSignUp button
 		reg.clickLoginOrSignUP();
 		
-		if(driver.getPageSource().contains("New User Signup! "))
-		{
-		test.log(Status.PASS,"ITs new User sigup page");
-		}
-		else
-		{
-			test.log(Status.FAIL,"Its not the Home page");
-		}
-	    reg.setName("Keerthanna");
+		//Verify 'New User Signup!' is visible
+		hp.isNewUserSignUpVisible(driver, test);
+		
+		//Filling the Signup 
+		reg.setName("Keerthanna");
 	    reg.setEmail("jndsvjkn@gmail.com");
 	    reg.signup();
 	    
@@ -59,8 +45,36 @@ public class TC_RegisterUser_001 extends BaseClass {
 	    reg.setCity("Chennai");
 	    reg.setZipcode("600110");
 	    reg.setMobileNumber("8876587980");
-	
-		
+	    //clicking on the Createaccount button
+	    reg.clickCreateAccount(js);
+	    
+	    //Verify that 'ACCOUNT CREATED!' is visible
+	    hp.isAccountCreated(driver, test);
+	    
+	    //clicking on continue
+	    reg.clickContinue();
+	    
+	    
+	    driver.navigate().refresh();
+	    
+	    reg.clickContinue();
+	    
+	    //Checking Logged in or not
+	    hp.isLoggedIn(driver, test);
+	  
+	    //Deleting the Account
+	    reg.clickDelete();
+	    
+	    //checking the account deleted message
+	    hp.isAccountDeleted(driver, test);
+	    
+	    //clicking on the delete button
+	    reg.clickDeleteContinue();
+	   
+	    //checking the homepage is visible or not 
+	    hp.homepageIsVisible(driver, test);  	
+	    	
+	     	
 	}
 
 }

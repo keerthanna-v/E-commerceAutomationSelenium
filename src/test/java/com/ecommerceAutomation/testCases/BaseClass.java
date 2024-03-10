@@ -42,7 +42,7 @@ public class BaseClass {
 	
 	
 	@AfterClass
-	public void tearDown()
+	public void tearDown() throws InterruptedException
 	{
 		extent.flush();
 		driver.quit();
