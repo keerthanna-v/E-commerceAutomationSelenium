@@ -8,8 +8,12 @@ import org.testng.annotations.BeforeClass;
 
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.ecommerceAutomation.pageObjects.HomePage;
+import com.ecommerceAutomation.pageObjects.RegisterUser;
+import com.ecommerceAutomation.utilities.Methods_HomePage;
 
 public class BaseClass {
 	
@@ -18,6 +22,7 @@ public class BaseClass {
 	public ExtentSparkReporter spark;
 	public ExtentReports extent;
 	public JavascriptExecutor js;
+
 	
 	
 	@BeforeClass
@@ -37,6 +42,7 @@ public class BaseClass {
 		spark.config().setReportName("E-commerce Automation report");
 		                // Dark Theme
 		spark.config().setTheme(Theme.DARK);
+	
 	}
 	
 	

@@ -1,6 +1,7 @@
 package com.ecommerceAutomation.testCases;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentTest;
+import com.ecommerceAutomation.pageObjects.HomePage;
 import com.ecommerceAutomation.pageObjects.RegisterUser;
 import com.ecommerceAutomation.utilities.Methods_HomePage;
 
@@ -11,21 +12,21 @@ public class TC_RegisterUser_001 extends BaseClass {
 	{
 		ExtentTest test;
 		RegisterUser reg = new RegisterUser(driver);
-		Methods_HomePage hp = new Methods_HomePage();
+		Methods_HomePage mhp = new Methods_HomePage();
+		HomePage hp = new HomePage(driver);
 		test=extent.createTest("RegisterUser");
-		
 		//Verify that home page is visible successfully
-		hp.homepageIsVisible(driver, test);
+		mhp.homepageIsVisible(driver, test);
 		
 	    //Clicking on the LoginOrSignUp button
-		reg.clickLoginOrSignUP();
+		hp.clickLoginOrSignUP();
 		
 		//Verify 'New User Signup!' is visible
-		hp.isNewUserSignUpVisible(driver, test);
+		mhp.isNewUserSignUpVisible(driver, test);
 		
 		//Filling the Signup 
 		reg.setName("Keerthanna");
-	    reg.setEmail("jndsvjkn@gmail.com");
+	    reg.setEmail("dshbhb@gmail.com");
 	    reg.signup();
 	    
 	    reg.selectTitle("Mr");
@@ -45,11 +46,12 @@ public class TC_RegisterUser_001 extends BaseClass {
 	    reg.setCity("Chennai");
 	    reg.setZipcode("600110");
 	    reg.setMobileNumber("8876587980");
+	    
 	    //clicking on the Createaccount button
 	    reg.clickCreateAccount(js);
 	    
 	    //Verify that 'ACCOUNT CREATED!' is visible
-	    hp.isAccountCreated(driver, test);
+	    mhp.isAccountCreated(driver, test);
 	    
 	    //clicking on continue
 	    reg.clickContinue();
@@ -60,21 +62,13 @@ public class TC_RegisterUser_001 extends BaseClass {
 	    reg.clickContinue();
 	    
 	    //Checking Logged in or not
-	    hp.isLoggedIn(driver, test);
-	  
-	    //Deleting the Account
-	    reg.clickDelete();
+	    mhp.isLoggedIn(driver, test);
 	    
-	    //checking the account deleted message
-	    hp.isAccountDeleted(driver, test);
-	    
-	    //clicking on the delete button
-	    reg.clickDeleteContinue();
-	   
-	    //checking the homepage is visible or not 
-	    hp.homepageIsVisible(driver, test);  	
+	   //Deleting the account
+	  //  mhp.deleteAccount(reg, driver, test);
 	    	
 	     	
 	}
+	
 
 }

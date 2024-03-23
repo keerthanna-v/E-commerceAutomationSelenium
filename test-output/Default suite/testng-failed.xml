@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ecommerceAutomation.testCases.TC_RegisterUser_001">
+      <class name="com.ecommerceAutomation.testCases.TC_ContactUsForm_006">
         <methods>
           <include name="setUp"/>
+          <include name="ContactUsForm"/>
           <include name="tearDown"/>
-          <include name="RegisterUser"/>
         </methods>
-      </class> <!-- com.ecommerceAutomation.testCases.TC_RegisterUser_001 -->
+      </class> <!-- com.ecommerceAutomation.testCases.TC_ContactUsForm_006 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

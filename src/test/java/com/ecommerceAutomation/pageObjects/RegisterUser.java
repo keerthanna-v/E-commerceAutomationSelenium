@@ -24,16 +24,9 @@ public class RegisterUser {
 	    this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	
-	
-	
-	//Actions actions = new Actions(driver);
+
 	
 	// Locators
-	
-	//Sign up / Login button in home page
-	@FindBy(xpath = "//a[contains(text(),' Signup / Login')]")
-	WebElement btnLoginOrSignUp;
 	
 	
 	//name in the signup section
@@ -140,10 +133,7 @@ public class RegisterUser {
 	
 	//Actions
 	
-	public void clickLoginOrSignUP()
-	{
-		btnLoginOrSignUp.click();
-	}
+	
 	
 	public void setName(String name)
 	{

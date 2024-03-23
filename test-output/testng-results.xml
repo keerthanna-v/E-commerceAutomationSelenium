@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-10T13:06:42 IST" name="Default suite" finished-at="2024-03-10T13:07:16 IST" duration-ms="33872">
+  <suite started-at="2024-03-10T19:19:01 IST" name="Default suite" finished-at="2024-03-10T19:19:10 IST" duration-ms="8784">
     <groups>
     </groups>
-    <test started-at="2024-03-10T13:06:42 IST" name="Default test" finished-at="2024-03-10T13:07:16 IST" duration-ms="33872">
-      <class name="com.ecommerceAutomation.testCases.TC_RegisterUser_001">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.ecommerceAutomation.testCases.TC_RegisterUser_001@4678a2eb]" started-at="2024-03-10T13:06:42 IST" name="setUp" finished-at="2024-03-10T13:06:51 IST" duration-ms="8400" status="PASS">
+    <test started-at="2024-03-10T19:19:01 IST" name="Default test" finished-at="2024-03-10T19:19:10 IST" duration-ms="8784">
+      <class name="com.ecommerceAutomation.testCases.TC_VerifyTestCasePage_007">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.ecommerceAutomation.testCases.TC_VerifyTestCasePage_007@4678a2eb]" started-at="2024-03-10T19:19:01 IST" name="setUp" finished-at="2024-03-10T19:19:08 IST" duration-ms="7094" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="RegisterUser()[pri:0, instance:com.ecommerceAutomation.testCases.TC_RegisterUser_001@4678a2eb]" started-at="2024-03-10T13:06:51 IST" name="RegisterUser" finished-at="2024-03-10T13:07:14 IST" duration-ms="23835" status="PASS">
+        <test-method signature="verifyTestCasePage()[pri:0, instance:com.ecommerceAutomation.testCases.TC_VerifyTestCasePage_007@4678a2eb]" started-at="2024-03-10T19:19:08 IST" name="verifyTestCasePage" finished-at="2024-03-10T19:19:08 IST" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RegisterUser -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecommerceAutomation.testCases.TC_RegisterUser_001@4678a2eb]" started-at="2024-03-10T13:07:14 IST" name="tearDown" finished-at="2024-03-10T13:07:16 IST" duration-ms="1558" status="PASS">
+        </test-method> <!-- verifyTestCasePage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecommerceAutomation.testCases.TC_VerifyTestCasePage_007@4678a2eb]" started-at="2024-03-10T19:19:08 IST" name="tearDown" finished-at="2024-03-10T19:19:10 IST" duration-ms="1420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ecommerceAutomation.testCases.TC_RegisterUser_001 -->
+      </class> <!-- com.ecommerceAutomation.testCases.TC_VerifyTestCasePage_007 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
